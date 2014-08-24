@@ -1,11 +1,9 @@
-package net.daneking.skillstool;
+package net.daneking.skillstool.skills;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.notNullValue;
 
 import javax.ws.rs.core.Response;
-
-import net.daneking.skillstool.skills.Skill;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -14,7 +12,7 @@ import util.TestSupport;
 
 public class SkillIntegrationTest extends TestSupport<SkillResource> {
 
-	private static final String PATH = "skill";
+	private static final String PATH = "skills";
 	private Response expectedResponse;
 
 	@Before

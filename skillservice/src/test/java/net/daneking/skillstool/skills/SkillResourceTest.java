@@ -1,4 +1,4 @@
-package net.daneking.skillstool;
+package net.daneking.skillstool.skills;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.notNullValue;

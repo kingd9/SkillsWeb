@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @XmlRootElement()
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Skill {
+class Skill {
 	private String name;
 	private String level;
 

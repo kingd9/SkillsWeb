@@ -1,4 +1,4 @@
-package net.daneking.skillstool;
+package net.daneking.skillstool.skills;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -6,7 +6,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@Path("skill")
+@Path("skills")
 public class SkillResource {
 	private final SkillRepository repository;
 

@@ -3,8 +3,6 @@ package net.daneking.skillstool.skills;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.notNullValue;
 
-import javax.ws.rs.core.Response;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,7 +16,6 @@ public class SkillResourceTest {
 
 	@InjectMocks
 	private SkillResource resource;
-	private Response response;
 	@Mock
 	private SkillRepository repository;
 

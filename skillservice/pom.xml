@@ -84,14 +84,14 @@
 
 	<dependencies>
 		<!-- Server -->
-		<dependency>
-			<groupId>org.glassfish.jersey.containers</groupId>
-			<artifactId>jersey-container-servlet</artifactId>
-		</dependency>
 <!-- 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
-			<artifactId>jersey-container-grizzly2-http</artifactId>
+			<artifactId>jersey-container-servlet</artifactId>
 		</dependency> -->
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-grizzly2-http</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.media</groupId>
 			<artifactId>jersey-media-json-jackson</artifactId>
@@ -105,22 +105,17 @@
 			<groupId>com.fasterxml.jackson.jaxrs</groupId>
 			<artifactId>jackson-jaxrs-json-provider</artifactId>
 			<version>${jackson.version}</version>
-		</dependency>
-<!-- 		<dependency>
-			<groupId>com.theoryinpractise</groupId>
-			<artifactId>halbuilder</artifactId>
-			<version>1.0.5</version>
-		</dependency>
-		<dependency>
-			<groupId>com.theoryinpractise</groupId>
-			<artifactId>halbuilder-jaxrs</artifactId>
-			<version>1.0.1-SNAPSHOT</version>
-		</dependency> -->
-		<dependency>
-			<groupId>com.theoryinpractise</groupId>
-			<artifactId>halbuilder-standard</artifactId>
-			<version>4.0.1</version>
-		</dependency>
+		</dependency> 
+        <dependency>
+            <groupId>com.theoryinpractise</groupId>
+            <artifactId>halbuilder-jaxrs</artifactId>
+            <version>1.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.theoryinpractise</groupId>
+            <artifactId>halbuilder-standard</artifactId>
+            <version>4.0.1</version>
+        </dependency>
 
 		<!-- uncomment this to get JSON support <dependency> <groupId>org.glassfish.jersey.media</groupId> 
 			<artifactId>jersey-media-moxy </artifactId> </dependency> -->
@@ -160,17 +155,15 @@
 		<dependency>
 			<groupId>org.glassfish.jersey.test-framework.providers</groupId>
 			<artifactId>jersey-test-framework-provider-inmemory</artifactId>
-			<version>${jersey.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
 	<repositories>
-		<repository>
-			<id>Spark repository</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
+        <repository>
+            <id>sonatype-staging</id>
+            <name>oss.sonatype.org Staging Repository</name>
+            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+
 	</repositories>
 </project>

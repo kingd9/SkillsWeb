@@ -9,6 +9,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 public class PersonResourceTest {
+	private static final int ID = 1;
 	@InjectMocks
 	private PersonResource underTest;
 	@Mock
@@ -21,15 +22,19 @@ public class PersonResourceTest {
 
 	@Test
 	public void getIdCallsFactoryGetOne() {
-		Long id = Long.valueOf(1);
-		underTest.get(id);
-		verify(factory).getOne(id);
+		underTest.get(Long.valueOf(ID));
+		verify(factory).getOne(Long.valueOf(1));
 	}
 
 	@Test
-	public void getCallsFactoryGetAll() {
-		Long id = Long.valueOf(1);
+	public void getToRootCallsGetRoot() {
 		underTest.get();
-		verify(factory).getAll();
+		verify(factory).getRoot();
+	}
+
+	@Test
+	public void postCallsFactoryAdd() {
+		underTest.add();
+		verify(factory).add();
 	}
 }

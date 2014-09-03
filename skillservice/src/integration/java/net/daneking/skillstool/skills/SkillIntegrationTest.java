@@ -12,7 +12,7 @@ import util.TestSupport;
 
 public class SkillIntegrationTest extends TestSupport<SkillResource> {
 
-	private static final String PATH = "skills";
+	private static final String PATH = SkillResource.PATH;
 	private Response expectedResponse;
 
 	@Before

@@ -6,8 +6,9 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@Path("skills")
+@Path(SkillResource.PATH)
 public class SkillResource {
+	static final String PATH = "skills";
 	private final SkillRepository repository;
 
 	public SkillResource() {

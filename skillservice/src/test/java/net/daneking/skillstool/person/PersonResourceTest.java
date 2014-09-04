@@ -2,6 +2,8 @@ package net.daneking.skillstool.person;
 
 import static org.mockito.Mockito.verify;
 
+import java.net.URISyntaxException;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -13,7 +15,7 @@ public class PersonResourceTest {
 	@InjectMocks
 	private PersonResource underTest;
 	@Mock
-	private PersonRespository factory;
+	private ResponseFactory factory;
 
 	@Before
 	public void setup() {
@@ -27,7 +29,7 @@ public class PersonResourceTest {
 	}
 
 	@Test
-	public void getToRootCallsGetRoot() {
+	public void getToRootCallsGetRoot() throws URISyntaxException {
 		underTest.get();
 		verify(factory).getRoot();
 	}

@@ -2,6 +2,8 @@ package net.daneking.skillstool.person;
 
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 
+import java.net.URISyntaxException;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -12,13 +14,13 @@ import javax.ws.rs.core.Response;
 @Path(PersonResource.PATH)
 public class PersonResource {
 	static final String PATH = "person";
-	private final PersonRespository factory;
+	private final ResponseFactory factory;
 
 	public PersonResource() {
-		factory = new PersonRespository();
+		factory = new ResponseFactory();
 	}
 
-	public PersonResource(final PersonRespository factory) {
+	public PersonResource(final ResponseFactory factory) {
 		this.factory = factory;
 	}
 
@@ -31,7 +33,7 @@ public class PersonResource {
 
 	@GET
 	@Produces(APPLICATION_JSON)
-	public Response get() {
+	public Response get() throws URISyntaxException {
 		return factory.getRoot();
 	}
 

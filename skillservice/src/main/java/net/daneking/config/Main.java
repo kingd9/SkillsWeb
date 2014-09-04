@@ -15,7 +15,8 @@ public class Main {
 	// Setup a reusable RepresentationFactory with standard links/settings
 	public static final RepresentationFactory representationFactory = new StandardRepresentationFactory().withFlag(
 			RepresentationFactory.PRETTY_PRINT).withLink("website", "http://gotohal.net");
-	public static URI makeUri(final Class resourceClass) throws URISyntaxException {
+
+	public static <T> URI makeUri(final Class<T> resourceClass) throws URISyntaxException {
 		URI href = UriBuilder.fromResource(resourceClass).build();
 		return new URI(BASE_URI).resolve(href);
 	}

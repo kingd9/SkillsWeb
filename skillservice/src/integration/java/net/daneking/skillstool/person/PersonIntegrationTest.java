@@ -44,15 +44,13 @@ public class PersonIntegrationTest extends TestSupport<PersonResource> {
 		assertThat(response.readEntity(Person.class), notNullValue());
 	}
 
-	@Test
-	public void addAndThenGetPerson() {
-		final Response response = target(PATH).request().get(Response.class);
-		PersonRepresentation representation = response.readEntity(PersonRepresentation.class);
-		checkLinks(representation);
-		// addLink.getType()
-	}
-
-	private void checkLinks(final PersonRepresentation representation) {
-		assertThat(representation.getLinks(), notNullValue());
-	}
+	/*
+	 * @Test public void addAndThenGetPerson() { final Response response =
+	 * target(PATH).request().get(Response.class); PersonRepresentation
+	 * representation = response.readEntity(PersonRepresentation.class);
+	 * checkLinks(representation); // addLink.getType() }
+	 * 
+	 * private void checkLinks(final PersonRepresentation representation) {
+	 * assertThat(representation.getLinks(), notNullValue()); }
+	 */
 }

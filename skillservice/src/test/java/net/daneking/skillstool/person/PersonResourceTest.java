@@ -15,7 +15,7 @@ public class PersonResourceTest {
 	@InjectMocks
 	private PersonResource underTest;
 	@Mock
-	private ResponseFactory factory;
+	private PersonResponseFactory factory;
 
 	@Before
 	public void setup() {

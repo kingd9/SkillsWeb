@@ -36,7 +36,8 @@ public class PersonResourceTest {
 
 	@Test
 	public void postCallsFactoryAdd() {
-		underTest.add();
-		verify(factory).add();
+		Person person = new Person();
+		underTest.add(person);
+		verify(factory).add(person);
 	}
 }

@@ -2,11 +2,13 @@ package net.daneking.skillstool.person;
 
 import static com.theoryinpractise.halbuilder.api.RepresentationFactory.HAL_JSON;
 import static com.theoryinpractise.halbuilder.api.RepresentationFactory.HAL_XML;
+import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 import static net.daneking.config.Main.makeUri;
 import static net.daneking.config.Main.representationFactory;
 
 import java.net.URISyntaxException;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -52,8 +54,9 @@ public class PersonResource {
 
 	@POST
 	@Produces({ HAL_JSON, HAL_XML })
-	public Response add() {
-		return factory.add();
+	@Consumes(APPLICATION_JSON)
+	public Response add(final Person person) {
+		return factory.add(person);
 
 	}
 
